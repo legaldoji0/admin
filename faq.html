@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--Code By Webdevtrick ( https://webdevtrick.com )-->
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML CSS FAQ Design | Webdevtrick.com</title>
+  <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/style.scss">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <link rel="stylesheet" href="./styles/mediaq.css">
+<style>
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+.faq h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #ffae00;
+}
+.accordion a:hover::after {
+  border: 1px solid #ffae00;
+}
+.accordion a.active {
+  color: #ffae00;
+  border-bottom: 1px solid #ffae00;
+}
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #7288a2;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #7288a2;
+  text-align: center;
+}
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #ffae00;
+  border: 1px solid #ffae00;
+}
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+</style>
+
+</head>
+<body>
+
+    <!-- Header Start -->
+    <header class="col-12 just-cnt-cent align-itm-cent">
+        <div class="cont col-12 just-cnt-spbw align-itm-cent">
+            <div class="h-logo just-cnt-spbw align-itm-cent">
+                <img src="./images/h-logo-dark.png" alt="Logo" class="just-cnt-spbw align-itm-cent col-12">
+            </div>
+            <nav class="col-6 just-cnt-cent align-itm-cent displ-tab">
+                <ul class="col-12 just-cnt-cent align-itm-cent">
+                    <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="./index.html">Home</a></li>
+                    <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="#">Our Services</a></li>
+                    <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="./faq.html">FAQs</a></li>
+                    <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="#">Join-Us</a></li>
+                </ul>
+            </nav>
+            <div class="h-btns align-itm-cent displ-tab">
+                <a href="./login.php" class="jose">Login</a>
+                <a href="./signup.php" class="jose">Signup</a>
+            </div>
+            <button type="button" class="toggle-side-bar displ-mob"><i class="fas fa-bars"></i></button type="button">
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <style>
+      .faqcontainer {
+        margin: 0 auto;
+        padding: 4rem;
+        width: 48rem;
+      }
+      .faq h2 {
+        font-size: 1.75rem;
+        color: #ffffff;
+        /* padding: 1.3rem; */
+        margin: 20px 0;
+      }
+      .accordion a {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding: 15px 5px;
+        margin: 5px 0;
+        color: #ffc400;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border-bottom: 1px solid #e5e5e51d;
+      }
+      .accordion a:hover,
+      .accordion a:hover::after {
+        cursor: pointer;
+        color: #ffae00;
+      }
+      .accordion a:hover::after {
+        border: 1px solid #ffae00;
+      }
+      .accordion a.active {
+        color: #ffae00;
+        border-bottom: 1px solid #ffae00;
+      }
+@media only screen and (min-width: 768px) {
+      .accordion a::after {
+          display: flex;
+          align-items: center;
+        justify-content: center;
+        font-family: 'Ionicons';
+        content: '\f218';
+        position: absolute;
+        float: right;
+        right: 1rem;
+        font-size: 1rem;
+        color: #7288a2;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid #7288a2;
+        text-align: center;
+      }
+      .accordion a.active::after {
+        font-family: 'Ionicons';
+        content: '\f209';
+        color: #ffae00;
+        border: 1px solid #ffae00;
+      }
+}
+      .accordion .content {
+        opacity: 0;
+        padding: 0 1rem;
+        max-height: 0;
+        border-bottom: 1px solid #e5e5e5;
+        overflow: hidden;
+        clear: both;
+        -webkit-transition: all 0.2s ease 0.15s;
+        -o-transition: all 0.2s ease 0.15s;
+        transition: all 0.2s ease 0.15s;
+      }
+      .accordion .content p {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .accordion .content.active {
+        opacity: 1;
+        padding: 1rem;
+        max-height: 100%;
+        -webkit-transition: all 0.35s ease 0.15s;
+        -o-transition: all 0.35s ease 0.15s;
+        transition: all 0.35s ease 0.15s;
+      }
+      </style>
+      
+    <div class="faq col-12 displ-flx just-cnt-cent align-itm-cent">
+                
+      <div class="faqcontainer col-12">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <a>What types of cases are handled by advocates of LegalDoji?</a>
+      <div class="content">
+        <p>Our advocates specialize in a wide range of legal issues, including but not limited to Civil cases, criminal cases, family law, employment law, and more.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Is LegalDoji a law firm?</a>
+      <div class="content">
+        <p>Service cost/consultancy fee is decided by the respective advocates. You can log in to our dashboard and filter advocates as per your budget.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>What are the other filter options available for selecting an advocate?</a>
+      <div class="content">
+        <p>You can filter an advocate by their district, by their practice area, by their experience and by their consultancy fee.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>How do I book a consultation?</a>
+      <div class="content">
+        <p>Booking a consultation is easier than writing this, all you need to do is to sign in, choose your advocate, pay the consultancy fee and you are done.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>What payment method is accepted by you?</a>
+      <div class="content">
+        <p>We accept UPI, Debit card, Credit Card and Netbanking for payments.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Can I get an advocate from my local area?</a>
+      <div class="content">
+        <p>You can search for an advocate from our filter.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>How long will it take to resolve my case?</a>
+      <div class="content">
+        <p>No case is the same and therefore every case has its own timeline to get resolved. With the guidance from our expert advocates you can be sure to get it resolved ASAP</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Do you offer legal services in languages other than English?</a>
+      <div class="content">
+        <p>We have advocates from every part of India be it East or West, North or South. So you can always get an advocate for your preferred language.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Do you offer free initial consultations?</a>
+      <div class="content">
+        <p>No</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>What should I bring to my initial consultation?</a>
+      <div class="content">
+        <p>It is helpful if you bring any relevant documents or information related to your case to your initial
+            consultation. This may include police reports, medical records, or any other documentation that may be relevant to your case.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Do you offer representation in court?</a>
+      <div class="content">
+        <p>Yes, our attorneys are experienced litigators and are prepared to represent you in court if necessary.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>How can I contact your firm if I have an emergency?</a>
+      <div class="content">
+        <p>If you have an emergency and need to speak with an attorney urgently, please call our main office number and follow the prompts to reach our after-hours emergency line. Someone will be available to assist you.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+    <!-- Footer Start -->
+    <footer class="col-12 just-cnt-cent align-itm-cent flx-d-col">
+        <div class="cont col-12 just-cnt-cent align-itm-cent flx-wrp">
+            <div class="sub-cont col-12 col-md-3 flx-d-col just-cnt-cent align-itm-cent">
+                <img src="./images/main-logo.png" alt="" class="col-12">
+            </div>
+            <div class="sub-cont col-12 col-md-3 flx-d-col just-cnt-cent align-itm-cent">
+                <h3>Quick Links</h3>
+                <a href="#">Link →</a>
+                <a href="#">Link →</a>
+                <a href="#">Link →</a>
+                <a href="#">Link →</a>
+            </div>
+            <div class="sub-cont col-12 col-md-3 flx-d-col just-cnt-cent align-itm-cent">
+                <h3>Quick Links</h3>
+                <a href="#">Link →</a>
+                <a href="#">Link →</a>
+                <a href="#">Link →</a>
+                <a href="#">Link →</a>
+            </div>
+            <div class="sub-cont col-12 col-md-3 just-cnt-cent align-itm-cent">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div class="copyr col-12 just-cnt-cent align-itm-cent txt-al-cent">
+            <p class="col-12 txt-al-cent">Copyright - LegalDoji &copy; All Rights Reserved, 2022 <br/>
+             Made and Managed By Web-Fire.com</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://kit.fontawesome.com/c758c8bec9.js" crossorigin="anonymous"></script>
+    <script src="./scripts/vanilla-tilt.js"></script>
+    <script src="./scripts/app.js"></script>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script>
+    // Code By Webdevtrick ( https://webdevtrick.com )
+const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+
+</body>
+</html>

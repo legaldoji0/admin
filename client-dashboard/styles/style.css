@@ -1,0 +1,335 @@
+body {
+  position: relative;
+}
+body header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+  transform-style: preserve-3d;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.03);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+}
+body header .cont {
+  max-width: 1300px;
+  height: 50px;
+}
+body header .cont .h-logo {
+  height: 50px;
+}
+body header .cont .h-logo img {
+  height: 100%;
+}
+body header .cont nav {
+  max-width: 500px;
+  height: 50px;
+}
+body header .cont nav ul {
+  height: 100%;
+}
+body header .cont nav ul li {
+  height: 100%;
+}
+body header .cont nav ul li a {
+  height: 100%;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 0 30px;
+  transition: all 0.4s ease-in;
+}
+body header .cont nav ul li a:hover {
+  background-color: rgba(187, 255, 243, 0.142);
+}
+body header .cont .h-profile {
+  padding: 10px;
+  align-items: center;
+}
+body header .cont .h-profile a {
+  margin: 0 5px;
+  color: rgb(3, 3, 3);
+  transition: all 0.4s ease;
+}
+body header .cont .h-profile a:hover {
+  color: #1FA547;
+}
+body header .cont .h-profile a i:hover {
+  color: #1FA547;
+}
+body header .cont .h-profile img {
+  width: 35px;
+  height: 35px;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+body .adv-details-sidebar {
+  background: rgba(0, 0, 0, 0.431372549);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  padding: 20px;
+  border-radius: 20px;
+  height: calc(100vh - 60px);
+  max-width: 300px;
+  min-width: 250px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  transform-style: preserve-3d;
+  z-index: 10000000000;
+  transition: all 0.5s ease;
+  transform: translateX(500px);
+}
+body .adv-details-sidebar h2 {
+  margin: 10px 0 40px 0;
+}
+body .adv-details-sidebar img {
+  border-radius: 50%;
+  width: 100px;
+  margin: 10px;
+}
+body .tick-book-sidebar {
+  background: rgba(0, 0, 0, 0.431372549);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  padding: 20px;
+  border-radius: 20px;
+  height: calc(100vh - 60px);
+  max-width: 300px;
+  min-width: 250px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  transform-style: preserve-3d;
+  z-index: 10000000;
+  transition: all 0.5s ease;
+  transform: translateX(500px);
+}
+body .tick-details-sidebar {
+  background: rgba(0, 0, 0, 0.431372549);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  padding: 20px;
+  border-radius: 20px;
+  height: calc(100vh - 60px);
+  max-width: 300px;
+  min-width: 250px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  transform-style: preserve-3d;
+  z-index: 10000000;
+  transition: all 0.5s ease;
+  transform: translateX(500px);
+}
+body main {
+  margin: 50px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 50px);
+  transform-style: preserve-3d;
+  background: rgba(195, 195, 195, 0.16);
+  -webkit-backdrop-filter: blur(35px);
+          backdrop-filter: blur(35px);
+  z-index: 1;
+}
+body main .cont {
+  height: 100%;
+}
+body main .cont .hero {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.231372549);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+}
+body main .cont .hero .advocates {
+  height: 70%;
+  padding: 10px 20px;
+}
+body main .cont .hero .advocates .searchbar {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.1607843137);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+}
+body main .cont .hero .advocates .searchbar input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: calc(100% - 30px);
+}
+body main .cont .hero .advocates .searchbar input:focus {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: calc(100% - 30px);
+}
+body main .cont .hero .advocates .searchbar button {
+  margin: 0 5px;
+}
+body main .cont .hero .advocates .searchbar button:hover i {
+  color: #1FA547;
+}
+body main .cont .hero .advocates .adv-wrapper {
+  padding: 10px;
+  height: 100%;
+  overflow-x: scroll;
+  gap: 10px;
+  align-content: flex-start;
+}
+body main .cont .hero .advocates .adv-wrapper .adv-div {
+  background: rgba(0, 0, 0, 0.368627451);
+  max-height: 200px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.275);
+  margin: 5px;
+  gap: 10px;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 20px;
+  padding: 15px 10px;
+}
+body main .cont .hero .advocates .adv-wrapper .adv-div img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #1FA547;
+}
+body main .cont .hero .advocates .adv-wrapper .adv-div .verified, body main .cont .hero .advocates .adv-wrapper .adv-div .premium {
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #1FA547;
+}
+body main .cont .hero .advocates .adv-wrapper .adv-div .verified button, body main .cont .hero .advocates .adv-wrapper .adv-div .premium button {
+  padding: 5px 0;
+  height: 100%;
+  color: #000;
+}
+body main .cont .hero .advocates .adv-wrapper .adv-div .premium {
+  background-color: #ffaa00;
+  box-shadow: 0 0 10px rgba(255, 200, 90, 0.5411764706);
+}
+body main .cont .recent-blogs {
+  padding: 10px 20px;
+  height: 100%;
+  background: rgba(80, 80, 80, 0.3960784314);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+}
+body main .cont .recent-blogs .blog-wrapper {
+  overflow-y: scroll;
+}
+body footer {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 10px;
+  transform-style: preserve-3d;
+  z-index: 10000;
+  background: rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  max-width: 1300px;
+  height: 50px;
+}
+body footer nav {
+  max-width: 500px;
+  height: 50px;
+}
+body footer nav ul {
+  height: 100%;
+}
+body footer nav ul li {
+  height: 100%;
+}
+body footer nav ul li a {
+  height: 100%;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 0 30px;
+  transition: all 0.4s ease-in;
+}
+body footer nav ul li a:hover {
+  background-color: rgba(187, 255, 243, 0.142);
+}
+body .rec-tics {
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+  z-index: 1000000;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(13, 13, 13, 0.8823529412) !important;
+  background: rgba(34, 34, 34, 0.3921568627);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+}
+body .rec-tics .tick-wrapper {
+  padding: 10px 0;
+  overflow-x: scroll;
+}
+body .rec-tics .tick-wrapper .tick-div {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.0784313725);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+  margin: 5px;
+  min-width: 180px;
+  max-width: 180px;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 15px 10px;
+}
+body .rec-tics .tick-wrapper .tick-div .stat-open, body .rec-tics .tick-wrapper .tick-div .stat-open i {
+  color: #1FA547;
+}
+body .rec-tics .tick-wrapper .tick-div button {
+  color: rgb(255, 255, 255);
+}
+body .tickets {
+  height: 30%;
+  min-height: 150px;
+  max-height: 200px;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  background: rgba(13, 13, 13, 0.8823529412) !important;
+  background: rgba(34, 34, 34, 0.3921568627);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+}
+body .tickets .tick-wrapper {
+  padding: 10px 0;
+  overflow-x: scroll;
+}
+body .tickets .tick-wrapper .tick-div {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.0784313725);
+  -webkit-backdrop-filter: blur(48.5px);
+          backdrop-filter: blur(48.5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+  margin: 5px;
+  min-width: 180px;
+  max-width: 180px;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 15px 10px;
+}
+body .tickets .tick-wrapper .tick-div .stat-open, body .tickets .tick-wrapper .tick-div .stat-open i {
+  color: #1FA547;
+}
+body .tickets .tick-wrapper .tick-div button {
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=style.css.map */

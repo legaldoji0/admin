@@ -1,0 +1,41 @@
+/* Mobile M and S */
+@media only screen and (width < 750px) {
+    .hero .advocates {
+        height: 100% !important;
+    }
+    .hero .tickets {
+        /* transform: translateY(0px) !important; */
+        background: #0d0d0def !important;
+        max-height: 150px !important;
+        bottom: -60px !important;
+    }
+    .hero .advocates {
+        height: 100% !important;
+    }
+    .main {
+        height:  calc(100vh - 100px);
+    }
+}
+@media only screen and (width < 420px) {
+    .hero .advocates .adv-wrapper {
+        height: 100% !important;
+        padding: 0 0 100px 0 !important;
+    }
+    .hero .tickets {
+        /* transform: translateY(-80px) !important; */
+        background: #0d0d0def !important;
+        max-height: 150px !important;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) {
+}
+
+/* Desktops */
+@media only screen and (max-width: 900px) {
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/mediaq.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+
+    <!-- Scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+
+</head>
+<body>
+   
+    <!-- Header Start -->
+    <header class="col-12 just-cnt-cent align-itm-cent">
+        <div class="cont col-12 just-cnt-spbw align-itm-cent">
+            <div class="h-logo just-cnt-spbw align-itm-cent">
+                <img src="./images/h-logo-dark.png" alt="Logo" class="just-cnt-spbw align-itm-cent col-12">
+            </div>
+            <nav class="col-6 just-cnt-cent align-itm-cent displ-tab">
+                <ul class="col-12 just-cnt-cent align-itm-cent">
+                    <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="#">Dashboard</a></li>
+                    <!-- <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="#">Tickets</a></li> -->
+                    <li class="just-cnt-cent align-itm-cent"><a class="just-cnt-cent align-itm-cent" href="#">Document</a></li>
+                </ul>
+            </nav>
+            <div class="h-profile align-itm-cent  just-cnt-cent">
+                <a href="#" class="jose align-itm-cent just-cnt-cent"><i class="fas fa-newspaper"></i></a>
+                <a href="#" class="jose align-itm-cent just-cnt-cent"><i class="fas fa-bell"></i></a>
+                <img src="./images/profile.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <div id="adv-details-sidebar" class="adv-details-sidebar col-12 displ-flx align-itm-cent flx-d-col ">
+        <button id="ads-close">
+            Close
+        </button>
+        <h2>Advocate details</h2>
+        <div class="col-12 just-cnt-spev">
+            <img src="./images/profile.png" alt="" class="col-3" />
+            <h3 class="adv-name col-9">Advocate Name <br /> #LA76RTH</h3>
+            <p class="status">Pendinng </p>
+        </div>
+    </div>
+
+    <div id="tick-book-sidebar" class="tick-book-sidebar col-12 displ-flx align-itm-cent flx-d-col ">
+        <button id="tbs-close">
+            Close
+        </button>
+        <h2>Book Ticket</h2>
+
+        <h4>Price ₹0.00</h4>
+
+        <form action="./bookticket.php" method="post">
+            <input type="date" name="tickDate" id="tickDate">
+            <input type="text" name="text" id="tickTxt">
+            <input type="file" name="tickDocs" id="tickDocs">
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <div id="tick-details-sidebar" class="tick-details-sidebar col-12 displ-flx  align-itm-cent flx-d-col ">
+        <button id="tds-close">
+            Close
+        </button>
+        <h2>Ticket Details</h2>
+    </div>
+
+    <main class="col-12">
+        <div class="cont col-12 just-cnt-cent">
+
+            <div class="hero col-12 col-md-9 align-itm-cent flx-d-col">
+
+                <div class="advocates col-12 flx-d-col">
+                    <!-- <h3>Issue New Ticket</h3> -->
+                    <div class="searchbar col-12 just-cnt-cent align-itm-cent">
+                        <input class="just-cnt-cent align-itm-cent" type="text" placeholder="Search advocates">
+                        <button id="search-btn" class="just-cnt-cent align-itm-cent"><i class="fas fa-magnifying-glass"></i></button>
+                        <button id="filter-btn" class="just-cnt-cent align-itm-cent"><i class="fas fa-filter"></i></button>
+                    </div>
+
+                    <div class="adv-wrapper flx-wrp just-cnt-cent col-12">
+                        <div class="adv-div just-cnt-cent flx-d-col col-12 col-md-6 col-lg-3">
+                            <div class="col-12 just-cnt-spev">
+                                <img src="./images/profile.png" alt="" class="col-1" />
+                                <h4 class="adv-name">Advocate Name <br /> #LA76RTH</h4>
+                            </div>
+                            <div class="col-12 just-cnt-spev">
+                                <h4 class="price">$100</h4>
+                                <h4 class="experience">15 years</h4>
+                            </div>
+                            <div class="col-12 just-cnt-cent align-itm-cent">
+                                <button id="adv-details-btn" class="col-12 just-cnt-cent align-itm-cent adv-details-btn">View Details</button>
+                            </div>
+                            <div class="col-12 verified just-cnt-cent align-itm-cent">
+                                <button id="tick-book-btn" class="col-12 just-cnt-cent align-itm-cent book-tick-btn">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tickets col-12 flx-d-col active">
+                    <div class="just-cnt-spbw align-itm-cent">
+                        <h3>Recent Tickets</h3>
+                        <button type="button" id="tickopenbtn"><i class="fas fa-up-long"></i></button>
+                    </div>
+                    <div class="tick-wrapper displ-flx col-12">
+                        <div class="tick-div just-cnt-cent flx-d-col col-12 col-md-6 col-lg-3">
+                            <div class="col-12 just-cnt-spev">
+                                <!-- <img src="./images/profile.png" alt="" class="col-1"> -->
+                                <h4 class="adv-name txt-al-cent">1.  #TIC9956865</h4>
+                            </div>
+                            <div class="col-12 just-cnt-spev">
+                                <h4 class="price">$100</h4>
+                                <h4 class="date">29-12-2022</h4>
+                            </div>
+                            <h4 class="txt-al-cent stat-open">
+                                <i class="fas fa-circle"></i> Open
+                            </h4>
+                            <div class="col-12 verified just-cnt-cent align-itm-cent">
+                                <button class="col-12 just-cnt-cent align-itm-cent" id="tick-details-btn">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="recent-blogs displ-tab col-md-3 align-itm-cent flx-d-col">
+                <h3>Recent Blogs</h3>
+                <div class="blog-wrapper col-12 flx-d-col displ-flx align-itm-cent">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="col-12 just-cnt-cent align-itm-cent displ-mob">
+        <div class="cont col-12 just-cnt-cent align-itm-cent">
+            <nav class="col-12 just-cnt-cent align-itm-cent">
+                <ul class="col-12 just-cnt-cent align-itm-cent">
+                    <li class="col-3 just-cnt-cent align-itm-cent"><a href="#" class="col-12 flx-d-col just-cnt-cent align-itm-cent"><i class="fas fa-house-user"></i>Dashboard</a></li>
+                    <li class="col-3 just-cnt-cent align-itm-cent"><a href="#" class="col-12 flx-d-col just-cnt-cent align-itm-cent"><i class="fas fa-folder-open"></i>Documents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <div class="col-12 rec-tics" id="ticktsec">
+        <div class="just-cnt-spbw align-itm-cent">
+            <h3>Recent Tickets</h3>
+            <button type="button" id="tickclosbtn"><i class="fas fa-up-long"></i></button>
+        </div>
+        <div class="tick-wrapper displ-flx flx-wrp col-12">
+            <div class="tick-div just-cnt-cent flx-d-col col-12 col-md-6 col-lg-3">
+                <div class="col-12 just-cnt-spev">
+                    <!-- <img src="./images/profile.png" alt="" class="col-1"> -->
+                    <h4 class="adv-name txt-al-cent">1.  #TIC9956865</h4>
+                </div>
+                <div class="col-12 just-cnt-spev">
+                    <h4 class="price">$100</h4>
+                    <h4 class="date">29-12-2022</h4>
+                </div>
+                <h4 class="txt-al-cent stat-open">
+                    <i class="fas fa-circle"></i> Open
+                </h4>
+                <div class="col-12 verified just-cnt-cent align-itm-cent">
+                    <button class="col-12 just-cnt-cent align-itm-cent" type="button" id="tick-details-btn">View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c758c8bec9.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <script src="./scripts/vanilla-tilt.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gsap/1.19.1/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

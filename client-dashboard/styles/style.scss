@@ -1,0 +1,354 @@
+body {
+                position: relative;
+    header {
+        height: 50px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        padding: 0 10px;
+
+        transform-style: preserve-3d;
+        z-index: 10000;
+
+        background: rgba(0, 0, 0, 0.03);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+        backdrop-filter: blur(48.5px);
+        .cont {
+            max-width: 1300px;
+            height: 50px;
+            .h-logo {
+                height: 50px;
+                img {
+                    height: 100%;
+                }
+            }
+            nav {
+                max-width: 500px;
+                height: 50px;
+                ul {
+                    height: 100%;
+                    li {
+                        height: 100%;
+                        a {
+                            height: 100%;
+                            color: rgb(255, 255, 255);
+                            font-size: 12px;
+                            padding: 0 30px;
+                            transition: all 0.4s ease-in;
+                            &:hover {
+                                background-color: rgba(187, 255, 243, 0.142);
+                            }
+                        }
+                    }
+                }
+            }
+            .h-profile {
+                padding: 10px;
+                // justify-content: flex-end;
+                align-items: center;
+                a {
+                    margin: 0 5px;
+                    color: rgb(3, 3, 3);
+                    transition: all 0.4s ease;
+                    &:hover {
+                        color: #1FA547;
+                    }
+                    i:hover {
+                        color: #1FA547;
+                    }
+                }
+                img {
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 15px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .adv-details-sidebar {
+        background: #0000006e;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+        backdrop-filter: blur(48.5px);
+        padding: 20px;
+        border-radius: 20px; 
+        height: calc(100vh - 60px);
+        max-width: 300px;
+        min-width: 250px;
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+        transform-style: preserve-3d;
+        z-index: 10000000000;
+        transition: all 0.5s ease;
+        transform: translateX(500px);
+        h2 {
+            margin: 10px 0 40px 0;
+        }
+        img {
+            border-radius: 50%;
+            width: 100px;
+            margin: 10px;
+        }
+    }
+    .tick-book-sidebar {
+        background: #0000006e;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+        backdrop-filter: blur(48.5px);
+        padding: 20px;
+        border-radius: 20px; 
+        height: calc(100vh - 60px);
+        max-width: 300px;
+        min-width: 250px;
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+        transform-style: preserve-3d;
+        z-index: 10000000;
+        transition: all 0.5s ease;
+        transform: translateX(500px);
+    }
+    .tick-details-sidebar {
+        background: #0000006e;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+        backdrop-filter: blur(48.5px);
+        padding: 20px;
+        border-radius: 20px; 
+        height: calc(100vh - 60px);
+        max-width: 300px;
+        min-width: 250px;
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+        transform-style: preserve-3d;
+        z-index: 10000000;
+        transition: all 0.5s ease;
+        transform: translateX(500px);
+    }
+
+    main {
+        margin: 50px 0 0 0;
+        position: relative;
+        overflow: hidden;
+        height:  calc(100vh - 50px);
+        transform-style: preserve-3d;
+        background: rgba(195, 195, 195, 0.16);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+        backdrop-filter: blur(35px);
+        z-index: 1;
+        .cont {
+            // padding: 10px 0;
+            height: 100%;
+            .hero {
+                height: 100%;
+                background: #0000003b;
+                backdrop-filter: blur(48.5px);
+                .advocates {
+                    height: 70%;
+                    padding: 10px 20px;
+                        // overflow: scroll;
+                    .searchbar {
+                        padding: 10px 20px;
+                        border-radius: 50px;
+                        background: #00000029;
+                        backdrop-filter: blur(48.5px);
+                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+                        input {
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: #fff;
+                            width: calc(100% - 30px);
+                            &:focus {
+                                background-color: transparent;
+                                border: none;
+                                outline: none;
+                                color: #fff;
+                                width: calc(100% - 30px);
+                            }
+                            
+                        }
+                        button {
+                            margin: 0 5px;
+                            &:hover  i {
+                                color: #1FA547;
+                            }
+                        }
+                    }
+                    .adv-wrapper {
+                        padding: 10px;
+                        height: 100%;
+                        overflow-x: scroll;
+                        gap: 10px;
+                        align-content: flex-start;
+                        .adv-div {
+                            background: #0000005e;
+                            max-height: 200px;
+                            // backdrop-filter: blur(48.5px);
+                            box-shadow: 0 0 15px rgba(0, 0, 0, 0.275);
+                            margin: 5px;
+                            gap: 10px;
+                            max-width: 180px;
+                            max-height: 180px;
+                            border-radius: 20px;
+                            padding: 15px 10px;
+                            img {
+                                border-radius: 50%;
+                                width: 30px;
+                                height: 30px;
+                                border: 2px solid #1FA547;
+                            }
+                            .verified {
+                                // height: 10px;
+                                margin: 10px 0; 
+                                border-radius: 10px;
+                                background-color: #1FA547;
+                                button {
+                                    padding: 5px 0;
+                                    height: 100%;
+                                    color: #000;
+                                }
+                            }
+                            .premium {
+                                @extend .verified;
+                                background-color: #ffaa00;
+                                box-shadow: 0 0 10px #ffc85a8a;
+                            }
+                        }
+                    }
+                }
+            }
+            .recent-blogs {
+                    padding: 10px 20px; 
+                    height: 100%;
+                    background: #50505065;
+                    backdrop-filter: blur(48.5px);
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+                    .blog-wrapper {
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+    footer {
+        height: 50px;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        padding: 0 10px;
+
+        transform-style: preserve-3d;
+        z-index: 10000;
+
+        background: rgb(0, 0, 0);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+        backdrop-filter: blur(48.5px);
+        // background-color: rgb(0, 0, 0);
+        max-width: 1300px;
+        height: 50px;
+        nav {
+            max-width: 500px;
+            height: 50px;
+            ul {
+                height: 100%;
+                li {
+                    height: 100%;
+                    a {
+                        height: 100%;
+                        color: rgb(255, 255, 255);
+                        font-size: 12px;
+                        padding: 0 30px;
+                        transition: all 0.4s ease-in;
+                        &:hover {
+                            background-color: rgba(187, 255, 243, 0.142);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rec-tics {
+        // display: none;
+        height: 100vh;
+        width: 100vw;
+        transform-style: preserve-3d;
+        z-index: 1000000;
+        padding: 10px 20px; 
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        background: #0d0d0de1 !important;
+        background: #22222264;
+        backdrop-filter: blur(48.5px);
+        // position: relative;
+        .tick-wrapper {
+            padding: 10px 0;
+            // overflow-y: auto;
+            overflow-x: scroll;
+            .tick-div {
+                // display: block;
+                padding: 5px;
+                background: #00000014;
+                backdrop-filter: blur(48.5px);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+                margin: 5px;
+                min-width: 180px;
+                max-width: 180px;
+                gap: 5px;
+                border-radius: 20px;
+                padding: 15px 10px;
+                .stat-open, .stat-open i {
+                    color: #1FA547;
+                }
+                button {
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+    .tickets {
+        // display: none;
+        height: 30%;
+        min-height: 150px;
+        max-height: 200px;
+        padding: 10px 20px; 
+        position: fixed;
+        bottom: 0;
+        // left: 0;
+
+        background: #0d0d0de1 !important;
+        background: #22222264;
+        backdrop-filter: blur(48.5px);
+        // position: relative;
+        .tick-wrapper {
+            padding: 10px 0;
+            // overflow-y: auto;
+            overflow-x: scroll;
+            .tick-div {
+                // display: block;
+                padding: 5px;
+                background: #00000014;
+                backdrop-filter: blur(48.5px);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.081);
+                margin: 5px;
+                min-width: 180px;
+                max-width: 180px;
+                gap: 5px;
+                border-radius: 20px;
+                padding: 15px 10px;
+                .stat-open, .stat-open i {
+                    color: #1FA547;
+                }
+                button {
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}
